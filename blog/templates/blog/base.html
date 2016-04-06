@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  {% block head %}
+  <title>MonkBoy</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/vim.css' %}" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="{% static 'blog/js/modernizr-1.5.min.js' %}"></script>
+  {% endblock head %}
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="/blog/home">Monk<span class="logo_colour">Boy</span></a></h1>
+          <h2>A Life drip.</h2>
+        </div>
+      </div>
+      <nav>
+        <div id="menu_container">
+          <ul class="sf-menu" id="nav">
+            <li><a href="/blog/home">Home</a></li>
+            <li><a href="/blog/examples">Examples</a></li>
+            <li><a href="/blog/page">A Page</a></li>
+            <li><a href="/blog/another_page">Another Page</a></li>
+            <li><a href="#">Example Drop Down</a>
+              <ul>
+                <li><a href="#">Drop Down One</a></li>
+                <li><a href="#">Drop Down Two</a>
+                  <ul>
+                    <li><a href="#">Sub Drop Down One</a></li>
+                    <li><a href="#">Sub Drop Down Two</a></li>
+                    <li><a href="#">Sub Drop Down Three</a></li>
+                    <li><a href="#">Sub Drop Down Four</a></li>
+                    <li><a href="#">Sub Drop Down Five</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down Three</a></li>
+                <li><a href="#">Drop Down Four</a></li>
+                <li><a href="#">Drop Down Five</a></li>
+              </ul>
+            </li>
+            <li><a href="/blog/contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="site_content">
+      {% block site_content %}
+      <div id="sidebar_container">
+        {% block sidebar_container %}
+          <img class="paperclip" src="{% static 'blog/images/paperclip.png' %}" alt="paperclip" />
+        <div class="sidebar">
+          <h3>Latest News</h3>
+          <h4>New Website Launched</h4>
+          <h5>January 1st, 2012</h5>
+          <p>2012 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        </div>
+        <img class="paperclip" src="{% static 'blog/images/paperclip.png' %}" alt="paperclip" />
+        <div class="sidebar">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Another Link</a></li>
+            <li><a href="#">And Another</a></li>
+            <li><a href="#">Last One</a></li>
+          </ul>
+        </div>
+        <img class="paperclip" src="{% static 'blog/images/paperclip.png' %}" alt="paperclip" />
+        <div class="sidebar">
+          <h3>More Useful Links</h3>
+          <ul>
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Another Link</a></li>
+            <li><a href="#">And Another</a></li>
+            <li><a href="#">Last One</a></li>
+          </ul>
+        </div>
+        {% endblock sidebar_container %}
+      </div>
+      <div class="content">
+        {% block content %}
+          <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="{% static 'blog/images/home.png' %}" alt="home" /><h1 style="margin: 15px 0 0 0;">Welcome to the CSS3_two template</h1>
+        <p>This simple, fixed width website template is released under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>. This means you are free to download and use it for personal and commercial projects. However, you <strong>must leave the 'design from css3templates.co.uk' link in the footer of the template</strong>.</p>
+        <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS3</strong>.</p>
+        <p>You can view more free CSS3 web templates <a href="http://www.css3templates.co.uk">here</a>.</p>
+        <p>This template is a fully documented 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design. There is also a working PHP contact form on the contact page.</p>
+        <p></p>
+        <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="{% static 'blog/images/browser.png' %}" alt="browser" /><h1 style="margin: 15px 0 0 0;">Browser Compatibility</h1>
+        <p>This template has been tested in the following browsers:</p>
+        <ul>
+          <li>Internet Explorer 8</li>
+          <li>Internet Explorer 7</li>
+          <li>FireFox 10</li>
+          <li>Google Chrome 17</li>
+          <li>Safari 4</li>
+        </ul>
+        {% endblock content %}
+      </div>
+     {% endblock site_content %}
+    </div>
+    <div id="scroll">
+        {% block scroll %}
+        <a title="Scroll to the top" class="top" href="#"><img src="{% static 'blog/images/top.png' %}" alt="top" /></a>
+        {% endblock scroll %}
+    </div>
+    <footer>
+      {% block footer %}
+      <p><a href="/blog/home">Home</a> | <a href="/blog/examples">Examples</a> | <a href="/blog/page">A Page</a> | <a href="/blog/another_page">Another Page</a> | <a href="/blog/contact">Contact Us</a></p>
+      <p>Copyright &copy; CSS3_two | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+      {% endblock footer %}
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="{% static 'blog/js/jquery.js' %}"></script>
+  <script type="text/javascript" src="{% static 'blog/js/jquery.easing-sooper.js' %}"></script>
+  <script type="text/javascript" src="{% static 'blog/js/jquery.sooperfish.js' %}"></script>
+  {% block init_script %}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+      $('.top').click(function() {$('html, body').animate({scrollTop:0}, 'fast'); return false;});
+    });
+  </script>
+  {% endblock init_script %}
+</body>
+</html>

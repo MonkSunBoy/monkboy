@@ -1,0 +1,30 @@
+{% load static %}
+    <div id="top_container">
+	  <header>
+        <div id="logo"><h1>CSS3_<a href="#">flowers</a></h1></div>
+        <nav>
+        {% block nav %}
+          <ul class="lavaLampWithImage" id="lava_menu">
+            <li class="current"><a href="/blog/home">home</a></li>
+            <li><a href="/blog/examples">examples</a></li>
+            <li><a href="/blog/page">a page</a></li>
+            <li><a href="/blog/another_page">another page</a></li>
+            <li><a href="/blog/contact">contact</a></li>
+          </ul>
+       {% endblock nav %}
+          </nav>
+      </header>
+      <div class="slideshow">
+        <ul class="slideshow">
+            <li class="show"><img width="950" height="350" src="{% static 'blog/images/1.jpg' %}" alt="&quot;You can put a caption for your image right here&quot;" /></li>
+            <li><img width="950" height="350" src="{% static 'blog/images/2.jpg' %}" alt="&quot;You can put a description of the image here if you like, or anything else if you want.&quot;" /></li>
+            <li><img width="950" height="350" src="{% static 'blog/images/3.jpg' %}" alt="&quot;You can put a description of the image here if you like, or anything else if you want.&quot;" /></li>
+        </ul>
+	  </div>	
+	  <div class="strapline_container">	  
+        <div class="strapline">
+		  <h2>Your Business Strapline Here</h2>
+		</div>
+	  </div>
+	</div>	  
+

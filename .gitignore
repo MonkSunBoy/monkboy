@@ -1,0 +1,24 @@
+# kdiff3 ignore                                                                                                                                                                   
+*.orig
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# package ignore (optional)
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+# pyc
+*.pyc

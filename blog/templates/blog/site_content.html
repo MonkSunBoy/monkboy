@@ -1,0 +1,39 @@
+{% load static %}
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+            {% block sidebarNews %}
+          <h3>Latest News</h3>
+          <h4>New Website Launched</h4>
+          <h5>February 1st, 2014</h5>
+          <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+          {% endblock sidebarNews %}
+        </div>
+        <div class="sidebar">
+            {% block sidebarLinks %}
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Another Link</a></li>
+            <li><a href="#">And Another</a></li>
+            <li><a href="#">Last One</a></li>
+        </ul>
+            {% endblock sidebarLinks %}
+        </div>
+      </div>
+      <div id="content">
+          {% block siteContent %}
+        <h1>Welcome to CSS3_flowers</h1>
+        <p>This standards compliant, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from css3templates.co.uk' link in the footer of the template.</p>
+        <p>The template uses a lavalamp menu (based on jQuery) from <a href="http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/">here</a>. All of the images were shot by me - use as you wish.</p>
+        <h2>Browser Compatibility</h2>
+        <p>This template has been tested in the following browsers:</p>
+        <ul>
+          <li>Internet Explorer 9</li>
+          <li>FireFox 24</li>
+          <li>Google Chrome 31</li>
+      </ul>
+        {% endblock siteContent %}
+      </div>
+    </div>
+
